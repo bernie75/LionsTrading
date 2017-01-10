@@ -1,2 +1,55 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: url(<%= image_path 'phone.jpeg' %>);">
+  <div class="banner-content">
+    <h1>Lions Trading</h1>
+    <p>Very cool stuff, useful and smart</p>
+    <%= link_to 'Lions', class: 'btn btn-primary btn-lg' %>
+  </div>
+</div>
+ <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: url(<%= image_path 'background.jpeg'%>);">
+  <div class="card-category">Activity</div>
+  <div class="card-description">
+    <h2>London</h2>
+    <p>Very cool stuff, useful and smart</p>
+  </div>
+
+</div>
+
+    </div>
+    <div class="col-xs-12 col-sm-4">
+
+      <div class="card" style="background-image: url(<%= image_path 'city.jpeg'%>);">
+  <div class="card-category">London</div>
+  <div class="card-description">
+    <h2>London</h2>
+    <p>Very cool stuff, useful and smart</p>
+  </div>
+
+  <%= image_tag '', class: 'card-user avatar' %>
+  <a class="card-link" href="#" ></a>
+</div>
+
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: url(<%= image_path 'card-brussels.jpeg'%>);">
+  <div class="card-category">Popular</div>
+  <div class="card-description">
+    <h2>Some stuff</h2>
+    <p>Very cool stuff, useful and smart</p>
+  </div>
+    <%= image_tag 'anne.jpg', class: 'card-user avatar' %>
+  <a class="card-link" href="#" ></a>
+</div>
+    </div>
+  </div>
+</div>
+    <div class="text-center padded" id="newsletter">
+      <h2>Get news from us</h2>
+      <p>Leave us your mail and get news from us</p>
+      <form class="form-inline">
+        <input placeholder="bob@gmail.com" class="form-control" type="email">
+        <input value="Subscribe" class="btn btn-primary btn-bordered btn-bordered-primary" type="submit">
+      </form>
+    </div>
