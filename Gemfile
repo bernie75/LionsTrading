@@ -9,6 +9,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'devise'
 gem 'redis'
 
+source 'https://rails-assets.org' do
+  gem "rails-assets-underscore"
+end
+
 gem 'sass-rails'
 gem 'jquery-rails'
 gem 'uglifier'
@@ -20,7 +24,7 @@ gem 'autoprefixer-rails'
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
-  
+
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'spring'
