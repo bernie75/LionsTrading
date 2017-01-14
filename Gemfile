@@ -9,8 +9,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'devise'
 gem 'redis'
 
-
-
+gem 'sprockets-helpers'
 gem 'sass-rails'
 gem 'jquery-rails'
 gem 'uglifier'
@@ -22,7 +21,6 @@ gem 'autoprefixer-rails'
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
-
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'spring'
