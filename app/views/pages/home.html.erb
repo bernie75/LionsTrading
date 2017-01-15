@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: url(<%= image_tag 'dubai.jpg' %>);">
+<div class="banner" style="background-image: url(<%= image_path 'city.jpeg' %>);">
   <div class="banner-content">
     <h1>Lions Trading</h1>
     <div class="text-center padded" id="newsletter">
@@ -40,18 +40,16 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-4">
-      <div class="card" style="background-image: url(<%= image_tag 'background.jpeg'%>);">
-        <div class="card-category">Trade</div>
+      <div class="card" style="background-image: url(<%= image_path 'background.jpeg'%>);">
+        <div class="card-category">Activity</div>
           <div class="card-description">
-            <h2>Finance</h2>
+            <h2>Business</h2>
             <p>Very cool stuff, useful and smart</p>
           </div>
-          <%= image_tag '', class: 'card-user avatar' %>
-          <a class="card-link" href="#" ></a>
         </div>
       </div>
     <div class="col-xs-12 col-sm-4">
-      <div class="card" style="background-image: url(<%= image_tag 'card-london.jpeg'%>);">
+      <div class="card" style="background-image: url(<%= image_path 'card-london.jpeg'%>);">
         <div class="card-category">HO</div>
           <div class="card-description">
           <h2>London</h2>
@@ -62,13 +60,13 @@
       </div>
     </div>
     <div class="col-xs-12 col-sm-4">
-      <div class="card" style="background-image: url(<%= image_tag 'money.jpeg'%>);">
-        <div class="card-category">Venture</div>
+      <div class="card" style="background-image: url(<%= image_path 'dubai.jpg'%>);">
+        <div class="card-category">HO</div>
           <div class="card-description">
           <h2>Dubai</h2>
           <p>Very cool stuff, useful and smart</p>
           </div>
-        <%= image_tag '', class: 'card-user avatar' %>
+        <%= image_path'', class: 'card-user avatar' %>
         <a class="card-link" href="#" ></a>
       </div>
     </div>
