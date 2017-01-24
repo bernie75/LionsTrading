@@ -8,7 +8,7 @@ gem 'figaro'
 gem 'jbuilder', '~> 2.0'
 gem 'devise'
 gem 'redis'
-
+gem 'turbolinks'
 
 gem 'sass-rails'
 gem 'jquery-rails'

@@ -1,71 +1,83 @@
-<div class="navbar-wagon">
-  <!-- Logo -->
-  <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "leon.png" %>
-  <% end %>
 
-  <!-- Right Navigation -->
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
-  <a href="/products" class="navbar-wagon-item navbar-wagon-link">Financial Products</a>
+  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-play-circle"></i> <span class="light">The Lions</span> Trading
+                </a>
+            </div>
 
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">Growth</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#download">Invest</a>
+                    </li>
+                    <li>
+                        <a href="/products" class="navbar-wagon-item navbar-wagon-link">Financial Products</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                    <li>
+                      <% if user_signed_in? %>
 
+                      <!-- Notification -->
+                      <%= link_to "#", class: "navbar-wagon-item navbar-wagon-link" do %>
+                        <div class="badge-container">
+                          <i class="fa fa-envelope-o"></i>
+                          <div class="badge badge-blue">3</div>
+                        </div>
+                      <% end %>
 
-    <!-- Different navigation if login or not -->
-    <% if user_signed_in? %>
+                      <!-- Profile picture and dropdown -->
+                      <div class="navbar-wagon-item">
+                        <div class="dropdown">
+                          <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+                          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+                            <li>
+                              <%= link_to "#" do %>
+                                <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
+                              <% end %>
+                            </li>
+                            <li>
+                              <%= link_to "#" do %>
+                                <i class="fa fa-home"></i>  <%= t(".profile", default: "Home") %>
+                              <% end %>
+                            </li>
+                            <li>
+                              <%= link_to destroy_user_session_path, method: :delete do %>
+                                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+                              <% end %>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
 
-      <!-- Notification -->
-      <%= link_to "#", class: "navbar-wagon-item navbar-wagon-link" do %>
-        <div class="badge-container">
-          <i class="fa fa-envelope-o"></i>
-          <div class="badge badge-blue">3</div>
+                    <% else %>
+
+                      <!-- Login text link -->
+                      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+
+                    <% end %>
+                    </li>
+                </ul>
+            </div>
+
         </div>
-      <% end %>
+        <!-- /.container -->
+    </nav>
 
-      <!-- Profile picture and dropdown -->
-      <div class="navbar-wagon-item">
-        <div class="dropdown">
-          <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-            <li>
-              <%= link_to "#" do %>
-                <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to "#" do %>
-                <i class="fa fa-home"></i>  <%= t(".profile", default: "Home") %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to destroy_user_session_path, method: :delete do %>
-                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
-              <% end %>
-            </li>
-          </ul>
-        </div>
-      </div>
 
-    <% else %>
 
-      <!-- Login text link -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
-
-    <% end %>
-
-    <!-- Button (call-to-action) -->
-
-  </div>
-
-  <!-- Dropdown list appearing on mobile only -->
-  <div class="navbar-wagon-item hidden-md hidden-lg">
-    <div class="dropdown">
-      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
 
