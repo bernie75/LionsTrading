@@ -3,4 +3,6 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-@import '../../../startbootstrap-grayscale/sass/grayscale.scss';
+@import "config/grayscale";
+@import "config/variables";
+@import "config/mixins";
