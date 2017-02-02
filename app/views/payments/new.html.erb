@@ -1,0 +1,23 @@
+<section id="about" class="container content-section text-center">
+  <div class="row">
+    <h1>Purchase of <%= @order.product_sku %></h1>
+    <%= form_tag order_payments_path(@order) do %>
+
+      <article>
+        <label class="amount">
+          <span>Amount: <%= humanized_money_with_symbol(@order.amount) %></span>
+        </label>
+      </article>
+
+
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+        data-name="My product"
+        data-email="<%= current_user.email %>"
+        data-description="Product <%= @order.product_sku %>"
+        data-amount="<%= @order.amount_pennies %>"
+        data-currency="<%= @order.amount.currency %>"></script>
+
+    <% end %>
+  </div>
+</section>
