@@ -11,14 +11,6 @@
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= yield %>
-
-
-<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-
-
-    <script type="text/javascript">
-  Stripe.setPublishableKey('STRIPE_PUBLISHABLE_KEY');
-</script>
     <%= javascript_include_tag 'application' %>
     <%= render 'shared/footer' %>
     <script src="vendor/jquery/jquery.js"></script>
